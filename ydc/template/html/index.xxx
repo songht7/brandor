@@ -1,0 +1,66 @@
+<?php include_once 'header.xxx';?>
+
+<script src="../script/slide.js"></script>
+
+<?php include_once 'menu.xxx';?>
+<div id="Main">
+	<div class="slideShow">
+		<div class="slideMain">
+			<ul class="slideImg clearfix">
+	<?php if(!empty($bg)){foreach($bg as $k=>$v){?>
+	<?php if($k==0){$act='active';}else{$act='" style="display: none;';}?>
+				<li class="ssList <?php $act?>" ><a href="<?php if(!empty($v['original_link'])){echo "http://".$v['original_link'];}else{?>javascript:void(0);<?php }?>"><img src=".<?php echo $v['original_src'];?>" alt="" width="978" height="463" /></a></li>
+	<?php }}?>
+			</ul>
+		</div>
+	</div>
+
+	<div class="contBox">
+		<div class="pageRow rowBlock">
+	<?php if(!empty($cat)){foreach($cat as $k=>$v){?>
+			<div class="ctgBlock <?php if($k==3){echo 'ctgLast';}?>">
+				<a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id='.$v['cat_id']);?>" class="ctgLink ctgLink<?php echo $k+1;?>"><span><?php echo $v['cat_name'];?></span></a>
+				<a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id='.$v['cat_id']);?>" class="ctgImg">
+					<img class="pic" src=".<?php echo $v['original_src'];?>" width="222" height="131" />
+				</a>
+			</div>
+	<?php }}?>
+			<div class="ctgBlock ctgLast">
+				<a href="<?php echo $this->url_rewrite('index.php?a=home&m=contact&id=19');?>" class="ctgLink ctgLink4"><span>CONTACT US</span></a>
+				<a href="<?php echo $this->url_rewrite('index.php?a=home&m=contact&id=19');?>" class="ctgImg">
+					<img class="pic" src="../images/ydc/Contact.jpg" width="222" height="131" />
+				</a>
+			</div>
+			<div class="clearn"></div>
+		</div>
+
+
+		<div class="pageRow">
+			<div class="ctgListBox">
+				<div class="ctgTitle case">案例 branding case</div>
+				<div class="ctgList caseList clearfix">
+					<!--全部案例-->
+					<?php if(!empty($goods)){foreach($goods as $k=>$v){?>
+					<div class="ctgBlock <?php if($k%4==3){ ?> blockRight <?php } ?>">
+						<a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$v['goods_id']);?>" class="ctgImg"><img class="pic" src=".<?php echo $v['original_src'];?>" width="222" height="131" alt="<div class='pro_title_block'><?php echo $v['goods_name'];?></div>"/></a>
+					</div>
+					<?php }}?>
+					<!-- / -->
+				</div>
+			</div>
+		</div>
+		<div class="pageRow">
+			<div class="ctgListBox">
+				<div class="ctgTitle brand">礼品</div>
+				<div class="ctgList caseList clearfix">
+					<?php if(!empty($goods_l)){foreach($goods_l as $k=>$v){?>
+					<div class="ctgBlock <?php if($k%4==3){ ?> blockRight <?php } ?>">
+						<a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$v['goods_id']);?>" class="ctgImg"><img class="pic" src=".<?php echo $v['original_src'];?>" width="222" height="131" alt="<div class='pro_title_block'><?php echo $v['goods_name'];?></div>"/></a>
+					</div>
+					<?php }}?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php include_once 'footer.xxx';?>

@@ -1,0 +1,135 @@
+<?php include_once 'header.xxx';?>
+	
+<script>
+$(function(){
+	/***********************************************************/
+	var load_img;
+	var perv_list;
+	var next_list;
+	$(".cases a").click(function(){
+		var id=$(this).attr('value');
+		$.post("<?php echo $this->url_rewrite('index.php?a=home&m=gpimg');?>",{id:id},function(data){
+					if(data.error==0){
+						$(".img_show").html(data.data);
+						$(".img_show img:first-child").click();
+					}else{
+						alert('No image.');
+					}
+				},'Json');
+	});
+	$(".img_show img").live('click',function(){
+		
+		if(!$(".mark").length){
+			$("<div/>").addClass("mark").appendTo("body");
+		}
+		$(".img_box .img").attr("src",$(this).attr('src'))
+		load_img=$(this).index()
+		$(".img_box").show();
+		auto_pos();
+	})
+	$(".img_box .prev").live("click",function(){
+			var prev_num = --load_img;
+			if(prev_num>$(".img_show img").length-1){prev_num=--perv_list}
+			if(prev_num<0){
+				s_num=prev_num%($(".img_show img").length-1);
+				if(s_num==0){s_num=-($(".img_show img").length-1);}
+				prev_num=($(".img_show img").length)+s_num
+			}
+			next_list = prev_num
+			var prev_src=$(".img_show img:eq("+prev_num+")").attr("src")
+			$(".img_box .img").animate({opacity: "0.2"},800,function(){
+				$(".img_box .img").attr("src",prev_src).animate({opacity: "1"},800)
+				setTimeout(auto_pos,200);
+			})
+	})
+	$(".img_box .next").live("click",function(){
+			var next_num = ++load_img;
+			if(next_num<0){next_num=++next_list}
+			if(next_num>=$(".img_show img").length){
+				next_num=next_num%($(".img_show img").length);
+			}
+			perv_list = next_num
+			var next_src=$(".img_show img:eq("+next_num+")").attr("src")
+			$(".img_box .img").animate({opacity: "0.2"},800,function(){
+				$(".img_box .img").attr("src",next_src).animate({opacity: "1"},800)
+				setTimeout(auto_pos,200);
+			})
+	})
+	$(".img_box").live("mouseover",function(){
+		$(this).find('span').show();
+	});
+	$(".img_box").live("mouseout",function(){
+		$(this).find('span').hide();
+	});
+	$(".img_box .close").live("click",function(){
+		$(".img_box").hide();
+		$(".mark").remove();
+	})
+	$(".mark").live("click",function(){
+		$(".img_box").animate({opacity: "0"},800,function(){$(this).hide();});
+		$(".mark").animate({opacity: "0"},800,function(){$(this).remove();});
+	})
+	/***********************************************************/
+});
+function auto_pos(){
+		var box_width = $(".img_box").width();
+		var win_width = $(window).width();
+		var box_height = $(".img_box").height();
+		var win_height = $(window).height();
+		if((win_width-box_width)<0){
+			
+			if((win_height-box_height)<0){
+				$(".img_box").attr({"style":"top:0;left:0;display:block"})
+			}else{
+				$(".img_box").attr({"style":"top:"+(win_height-box_height)/2+"px;left:0;display:block"})
+			}
+			//$(".img_box").attr({"style":"left:0;display:block"})
+		}else{
+			
+			if((win_height-box_height)<0){
+				$(".img_box").attr({"style":"top:0;left:"+((win_width-box_width)/2-40)+"px;display:block"})
+			}else{
+				$(".img_box").attr({"style":"top:"+(win_height-box_height)/2+"px;left:"+((win_width-box_width)/2-40)+"px;display:block"})
+			}
+			//$(".img_box").attr({"style":"left:"+(win_width-box_width)/2+"px;display:block"})
+		}
+	}
+</script>
+	
+<?php include_once 'menu.xxx';?>
+	
+		<div id="MainBox" class="clearfix">
+			
+			<div id="ContBlock_a" >
+				<div id="top">
+					<img src=".<?php echo $img['original_src'];?>">
+				</div>
+				<div id="middle">
+					
+<?php if(!empty($goods_info)){foreach($goods_info as $c=>$g){ ?>
+					<div class="cases" >
+	<?php $os=0;if(!empty($g['imgs'])){foreach($g['imgs'] as $k=>$v){if($v['point']==0){$os=1;?>
+						<a class="img" href="javascript:void(0);" title="<?php echo $g['goods_name']; ?>" value="<?php echo $g['goods_id']; ?>"><img class="black" src=".<?php echo $v['original_src']; ?>" /></a>
+	<?php }}if($os==0){?>
+						<a class="img"  href="javascript:void(0);" title="<?php echo $g['goods_name']; ?>" value="<?php echo $g['goods_id']; ?>"><img src="" title="need copy" /></a>
+	<?php }}else{?>
+						<a class="img"  href="javascript:void(0);" title="<?php echo $g['goods_name']; ?>" value="<?php echo $g['goods_id']; ?>"><img src="" title="need copy" /></a>
+	<?php }?>
+						<div class="detail">
+							<a href="javascript:void(0);" title="<?php echo $g['goods_name']; ?>" class="title" value="<?php echo $g['goods_id']; ?>"><?php echo $g['goods_name']; ?></a>
+							<div class="d_detail"><?php echo $g['goods_detail']; ?></div>
+						</div>
+					</div>
+<?php }} ?>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="img_show"></div>
+		<div class="img_box">
+			<img alt="img/a.jpg" title="A" src="img/a.jpg" class="img">
+			<span class="prev"></span>
+			<span class="next"></span>
+		</div>
+<?php include_once 'footer.xxx';?>

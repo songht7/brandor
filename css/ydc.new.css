@@ -1,0 +1,167 @@
+@charset "utf-8";
+/**
+  * base.css
+  */
+/*html{height:101%}*/
+body{-webkit-text-size-adjust:none;background:#000;min-width:950px;font-family:"Microsoft YaHei",Arial;font-size:12px;color: #403A3A}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
+ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal}
+a{text-decoration:none;outline:none;/*blr:expression(this.onFocus=this.blur());*/color:#403324}
+a:hover{text-decoration:underline}
+.clearn{clear:both;height:1px;overflow:hidden;line-height:0}
+.clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.clearfix{zoom:1;_height:1%}
+.hide{display:none}
+.cgold{color:#A2835C}
+table{border-collapse:collapse}
+img{max-width: 950px;}
+
+.fL{float:left}
+.fR{float:right}
+.blockShadow{-moz-box-shadow:0 0 15px #aaa;-webkit-box-shadow:0 0 15px #aaa;o-box-shadow:0 0 15px #aaa;-ms-box-shadow:0 0 15px #aaa;box-shadow:0 0 15px #aaa;*border:1px solid #eee}
+
+#Wrapper{width: 950px;margin:0 auto;padding: 0 40px;background: #fff}
+
+.slideShow{width:100%;height:490px;margin-bottom: 25px;}
+.slideMain{margin:0 auto;position:relative;height: 490px}
+.slideImg{position:relative;height: 463px}
+.slideImg li{position:absolute;top:0;left:0;display:block;width:100%;height:auto;}
+
+.slidePrint{overflow: hidden;padding: 10px 0 0;}
+.slideBt{float: right;margin:0 auto;}
+.slideBt li{float:left;cursor: pointer;background:#000;width:9px;height:9px;overflow:hidden;margin-right:10px;_margin-right:5px;text-indent:-99999px;-ms-border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;border-radius:10px}
+.slideBt li.current{background:#999}
+.move{display: none;background:url("../images/arrow.png") no-repeat 0 -51px; height: 51px;width:27px;text-indent: -99999px;overflow: hidden}
+.move.next{background-position:0 0}
+
+#Header{padding:20px 0 35px;overflow: hidden;}
+#Logo{display: block;text-indent: -99999px;background: url("../images/ydc/logo.png") no-repeat;width:160px;height: 68px;float: left;margin:0 90px 0 0;_margin:0 45px 0 0;}
+.menu{float: right;}
+.menu li{float: left;margin:12px 35px 0 0;_margin:6px 18px 0 0;width:30px;}
+.menuLink{display: block;width:30px;background: url("../images/ydc/menu.png") no-repeat;height: 50px;overflow: hidden;text-indent: -99999px}
+.mLink1.active,.mLink1:hover{background-position: 0 -68px}
+.mLink2{background-position: -61px 0}
+.mLink2.active,.mLink2:hover{background-position: -61px -68px}
+.mLink3{background-position: -122px 0}
+.mLink3.active,.mLink3:hover{background-position: -122px -68px}
+.mLink4{background-position: -182px 0}
+.mLink4.active,.mLink4:hover{background-position: -182px -68px}
+.mLink5{background-position: -243px 0}
+.mLink5.active,.mLink5:hover{background-position: -243px -68px}
+.mLink6{background-position: -302px 0}
+.mLink6.active,.mLink6:hover{background-position: -302px -68px}
+.menu li.last{margin-right: 0}
+
+#Main{padding: 0 0 20px;min-height: 500px;position: relative;}
+
+.pageRow{padding-bottom: 25px}
+.ctgBlock{float: left;width: 222px;margin-right: 20px;_margin-right: 10px}
+.ctgBlock.ctgLast{margin-right: 0}
+	.ctgLink{margin-bottom: 20px;_margin-bottom: 10px;display: block;}
+.ctgImg{position: relative;display: block;}
+.linkOver{position: absolute;top:0;left: 0;z-index: 1;}
+.linkOver img{width: 222px;height: 132px;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);opacity: .8;filter: alpha(opacity=80);}
+.linkOver .pro_title_block{line-height:20px;padding:55px 0 0;color: #fff}
+.linkOver .pro_title_block p{width:200px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding:0 11px}
+.caseList .linkOver .pro_title_block{padding:45px 0 0}
+.ctgProTitle{position: absolute;top:0;left: 0;z-index: 2;line-height: 130px;text-align: center;color: #424242;font-size: 12px;width: 100%;height: 100%;}
+
+.rowBlock .ctgLink{border: none;background: url("../images/ydc/ctg_menu.png") no-repeat;float: none;margin-right: 20px;_margin-right:10px;padding: 0;width: 222px;height: 21px;overflow: hidden;text-indent: -9999px}
+.rowBlock .ctgLink2{background-position: -243px 0}
+.rowBlock .ctgLink3{background-position: -486px 0}
+.rowBlock .ctgLink4{background-position: -729px 0}
+.rowBlock .ctgLast .ctgLink{margin-right: 0}
+
+.ctgListBox{}
+.ctgTitle{background: url("../images/ydc/list_title.png") no-repeat 0 -1px;width:100%;height: 23px;overflow: hidden;text-indent: -99999px;margin-bottom: 20px}
+.ctgTitle.brand{background-position: 0 -55px}
+.ctgTitle.method{background-position: 0 -117px}
+.ctgTitle.news{background-position: 0 -175px}
+.ctgTitle.about{background-position: 0 -232px}
+.ctgList{overflow: hidden;}
+.ctgList .ctgBlock{margin-bottom:15px}
+.ctgInfo{text-align: center;padding:10px 0 0;font-size: 14px;height: 18px;}
+.blockRight{margin-right: 0}
+
+
+/** Detail **/
+/*.details .detail_img{display: block;margin: 0 auto 20px;_margin-bottom:10px;border: none;}*/
+.proHead{padding: 25px 0;position: relative;}
+.proTitle{font-size: 15px;padding:0 0 5px}
+.jiathis_style{float: right;margin: 10px 20px 0 0;_margin: 10px 10px 0 0}
+.share{background: url("../images/ydc/share.png") no-repeat;width: 24px;height: 24px;text-indent: -99999px;display: block;}
+.cTab{margin-bottom: 25px}
+.cTab td{padding:0 5px 8px 0;font-size: 15px;}
+.tag{padding:2px 10px;background: #e3e2e3;color: #3F3939;display: block;float: left;margin: 0 10px 10px 0}
+
+.detailTab{margin: 45px 0 40px;_margin:20px 0;}
+.detailTab th{padding-bottom: 35px;text-align: left;font-weight: normal;vertical-align: top;}
+.detailTab td{vertical-align: top;line-height: 24px}
+.detailTab .td_a{padding-right: 40px;}
+.detailTab .td_b{padding-right: 45px;}
+.detail_title .cont{padding-left: 5px}
+.detail_views .cont{padding-left: 13px}
+.detail_other .cont{padding-left: 15px;width: 130px;float: left;}
+.ctg_title{background: url("../images/ydc/detail_title.png") no-repeat;height: 20px;text-indent: -99999px;display: block;}
+.ctg_title_en{width: 186px;}.ctg_title_cn{width: 472px;}
+.line_yellow{display: block;height: 19px;width: 203px;border-bottom: 1px solid #231916;}
+/** 详细页标题 **/
+.ctg_title_brand.ctg_title_en{background-position: 0 -11px}
+.ctg_title_brand.ctg_title_cn{background-position: -235px -11px}
+.ctg_title_method.ctg_title_en{background-position: 0 -68px}
+.ctg_title_method.ctg_title_cn{background-position: -237px -68px}
+.ctg_title_news.ctg_title_en{background-position: 0 -121px}
+.ctg_title_news.ctg_title_cn{background-position: -236px -121px}
+.ctg_title_about.ctg_title_en{background-position:0 -169px}
+.ctg_title_about.ctg_title_cn{background-position: -236px -169px}
+.ctg_title_contact.ctg_title_en{background-position:0 -222px}
+.ctg_title_contact.ctg_title_cn{background-position: -236px -222px}
+
+/*.ctg_title_special.ctg_title_en{background-position: 0 -11px}
+.ctg_title_special.ctg_title_cn{background-position: -235px -11px}
+.ctg_title_brand.ctg_title_en{background-position: 0 -68px}
+.ctg_title_brand.ctg_title_cn{background-position: -235px -68px}
+.ctg_title_method.ctg_title_en{background-position: 0 -121px}
+.ctg_title_method.ctg_title_cn{background-position: -235px -121px}
+.ctg_title_news.ctg_title_en{background-position: 0 -169px}
+.ctg_title_news.ctg_title_cn{background-position: -235px -169px}
+.ctg_title_about.ctg_title_en{background-position:0 -222px}
+.ctg_title_about.ctg_title_cn{background-position: -235px -222px}
+*/
+.detailTab td{position:relative;}
+/** 案例详细页 **/
+.detailTab_case td{padding-bottom: 30px}
+.detailTab_case .tr_last td{padding-bottom: 0}
+.detailTab_case .line_yellow{top:2px;position: relative;}
+.ctg_title_case{/*background: url("../images/ydc/title_bg.png") left bottom;*/width: 100%;display: block;line-height: 21px;padding-left:8px;border-bottom: 1px solid #231916;}
+.ctg_title_en{font-size: 18px;line-height: 21px;}
+.case_infos{background: url("../images/ydc/detail_title_case.png") no-repeat;height: 38px;width: 100%;overflow: hidden;text-indent: -99999px;margin-top: 10px}
+.case_thinking{background-position: 0 -100px;height:40px}
+.case_creative{background-position: 0 -180px;}
+.detailTab_case .detail_other{padding-bottom: 0}
+table.detailTab_case table td{padding:0 5px 5px 0}
+
+.proBtn,.goTop{background: url("../images/ydc/arrow.png") no-repeat;width: 74px;height: 73px;text-indent: -99999px;position: fixed;}
+.prevPro{left:100px;top:315px;}
+.nextPro{background-position: -122px 0;right: 100px;top:315px;}
+.goTop{background-position: -246px 0;bottom:100px;right:10px;display: none}
+
+/** contact_us **/
+.mapBox{width:950px;height: 463px;background: #FEE01E;margin-bottom: 25px;_margin-bottom:13px;}
+.contactDetail .detailTab{margin:15px 0 20px;_margin:7px 0 10px;}
+.contactBox{margin-bottom: 50px;width:950px;height:auto;}
+/*.contactBlock{padding: 65px;min-height: 200px*/}
+.weixin{float: left;}
+.comp_name{font-size: 16px;}
+.contactDetail .detail_views .cont{padding-left:0}
+.contactUs{300px;line-height:18px}
+
+#Footer{min-height: 50px;padding: 20px 0;font-size:18px;line-height: 26px;border-top: 1px solid #777}
+.footerBox{margin: 0 auto;overflow: hidden}
+.footerLogo{display: block;background: url("../images/ydc/logoFooter.png") no-repeat;width:148px;height: 50px;text-indent: -99999px;float:left;}
+#Copyright,.taobao,.fLink{width: 24%;height:39px;float:left;background: url("../images/ydc/TaobaoFooter.png") no-repeat 50% 50%;text-indent: -99999px}
+.fLink{background: url("../images/ydc/footer_link.png") no-repeat 50% 50%;float: right}
+.weibo,.weixin{float: right;text-indent: -99999px;width: 25%;height: 39px}
+.weibo{background: url("../images/ydc/SinaFooter.png") no-repeat 50% 50%;border: 1px solid #777;border-width: 0 1px}
+.weixin{background: url("../images/ydc/WeixinFooter.png") no-repeat 50% 50%;border-right: 1px solid #777;}

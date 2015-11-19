@@ -1,0 +1,19 @@
+
+
+RewriteEngine on 
+
+RewriteCond %{HTTP_HOST} ^(www.)?brandor.cn$ 
+RewriteCond %{REQUEST_URI} !^/design/ 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /design/$1 
+RewriteCond %{HTTP_HOST} ^(www.)?brandor.cn$ 
+RewriteRule ^(/)?$ design/ [L] 
+
+RewriteCond %{HTTP_HOST} ^(www.)?brandor.net$ 
+RewriteCond %{REQUEST_URI} !^/product/ 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /product/$1 
+RewriteCond %{HTTP_HOST} ^(www.)?brandor.net$ 
+RewriteRule ^(/)?$ product/ [L] 

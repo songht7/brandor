@@ -1,0 +1,149 @@
+@charset "utf-8";
+/**
+  * base.css
+  */
+/*html{height:101%}*/
+body{-webkit-text-size-adjust:none;background:#fff;font-family:Arial,Microsoft YaHei;font-size:12px}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
+ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal}
+a{text-decoration:none;outline:none;/*blr:expression(this.onFocus=this.blur());*/color:#403324}
+a:hover{text-decoration:underline}
+.clearer{clear:both;height:1px;overflow:hidden;line-height:0}
+.clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.clearfix{zoom:1;_height:1%}
+.hide{display:none}
+.cgold{color:#A2835C}
+table{border-collapse:collapse}
+
+.fL{float:left}
+.fR{float:right}
+.blockShadow{-moz-box-shadow:0 0 15px #aaa;-webkit-box-shadow:0 0 15px #aaa;o-box-shadow:0 0 15px #aaa;-ms-box-shadow:0 0 15px #aaa;box-shadow:0 0 15px #aaa;*border:1px solid #eee}
+
+/*#Header{height:155px;background:#f8f8f9}display:none;*/
+#Header{height:100px;width:100%;position:fixed;top:auto;bottom:0;left: 0;z-index:9999;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.headBox{background: #f8f8f9;width: 100%;height:100%}
+#Logo{display:block;width:271px;height:51px}
+#Menu{float:left}
+#Menu li{float:left;/*border-left:1px solid #b8b1a4;*/padding:38px 17px 0 0;}
+/*#Menu li.last{border-right:1px solid #b8b1a4}*/
+#Menu li a{display:block;background: url("../images/ydc.bak/menu.png") no-repeat -5px 0;width:90px;height:35px;text-indent:-99999px}
+#Menu li a.philosopht{background-position:-100px 0;padding:0 10px 0 0}
+#Menu li a.giftLk{background-position:-197px 0}
+#Menu li a.contact{background-position:-290px 0}
+#Menu li a.shop{background-position:-378px 0;padding:0 15px 0 0}
+.pageInfo{float:right;width:136px;margin:42px 100px 0 0;_margin:19px 50px 0 0}
+#Menu li.logoBox{border:none;padding:17px 138px 0 100px}
+#Menu li.logoBox a{text-indent:0;width:119px;height:73px;background:none}
+
+#Main{position:relative;overflow:hidden;width:100%}
+.mainCont{position:absolute;top:0;left:0;width:100%;height:auto;z-index: 2;display: none;}
+.mainCont.old{z-index:1}
+#Mask{background:#fff;z-index:3;width:100%;height:100%;position:absolute;display: none;}
+
+.slideShow{width:100%}
+.slideMain{margin:0 auto;position:relative;}
+.slideImg{position:relative;}
+.slideImg li{position:absolute;top:0;left:0;display:block;width:100%;height:auto;}
+.slideImg li a:hover{cursor:default}
+
+.slidePrint{position:fixed;top:50px;right:50px;z-index:9}
+.slideBt{margin:0 auto;}
+.slideBt li{float:left;cursor: pointer;background:#000;width:9px;height:9px;overflow:hidden;margin-right:10px;_margin-right:5px;text-indent:-99999px;-ms-border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;border-radius:10px}
+.slideBt li.current{background:#999}
+.move{display: block;background:url("../images/arrow.png") no-repeat 0 -51px; height: 51px;width:27px;text-indent: -99999px;overflow: hidden}
+.move.next{background-position:0 0}
+
+/**frontpage_page**/
+.frontpage .move{display:none}
+
+/**Brand**/
+.brandInfo{position:absolute;top:15%;left:15%;z-index:1}
+
+/**Philosopht**/
+.PhiBox{position:relative;}
+.phiRow{position:absolute;top:0;left:0}
+.phi01,.phi02,.phi03{position:fixed;top:100px;left:135px;z-index:1}
+.phi01,.phi01 a{background:url("../images/ydc.bak/philosopht/phiInfo01.png") no-repeat;width:345px;height:315px}
+.phi01 a{background-position:0 -315px;display:block;height:50px;width:145px;text-indent:-99999px;position:relative;top:315px}
+
+.phi02{left:auto;right:80px;}
+.phi02,.phi02 a{background:url("../images/ydc.bak/philosopht/phiInfo02.png") no-repeat;width:375px;height:308px}
+.phi02 a{background-position:right -308px;display:block;height:52px;width:135px;text-indent:-99999px;position:relative;top:308px;left:240px}
+
+.phi03{background:url("../images/ydc.bak/philosopht/phiInfo03.png") no-repeat;width:238px;height:320px;top:155px;left:215px;text-indent:-99999px}
+.phi03 a{display:block;width:100%;height:100%}
+
+/** gift **/
+.gift .slideBt{position: absolute;top:-100px;display: none;}
+.gift .slidePrint{left:50px;top:45%;}
+.gift .prev,.gift .next{position: absolute;left:0}
+.gift .next{left:auto;right: 0;}
+
+.giftBox{position:relative}
+.giftBlock,.giftRow,.boxIcon{position:absolute;top:0;left:0}
+.boxIcon{position:fixed;}
+.boxIcon{cursor:pointer;}
+.boxIcon{right:10px;top:15px;left:auto;background:url("../images/ydc.bak/gift/viewIcon.png") no-repeat;width:102px;height:126px;z-index:5}
+.giftLinks{background:url("../images/ydc.bak/gift/homeBtns.png") no-repeat;width:891px;height:469px;position:fixed;top:50px}
+.glks{display:block;width:119px;height:128px;position:absolute;top:339px;left:0px;text-indent:-99999px}
+.glk01{width:100px}
+.glk02{left:186px}
+.glk03{left:379px}
+.glk04{left:575px}
+.glk05{left:773px}
+
+.viewBox{position:relative;}
+.viewRow{position:absolute;top:0;left:0}
+.giftRow .next,.designNext,.infoNext,.teaBtn,.sourceRow01 .next{position:fixed;top:10%;left:10%;text-indent:-9999px}
+.viewRow01 .next{background:url("../images/ydc.bak/gift/view1btn.png") no-repeat;width:515px;height:245px}
+.viewRow02 .next{background:url("../images/ydc.bak/gift/view2btn.png") no-repeat;width:347px;height:317px;top:18%;}
+.viewRow03 .next{background:url("../images/ydc.bak/gift/view3btn.png") no-repeat;width:394px;height:230px;top:15%;left:45%}
+.viewRow04 .next{background:url("../images/ydc.bak/gift/view4btn.png") no-repeat;width:423px;height:299px;top:15%;left:55%;}
+
+.designBox .boxIcon{background:url("../images/ydc.bak/gift/designIcon.png") no-repeat;width:117px;height:127px;}
+.designRow01 .design01Next{background:url("../images/ydc.bak/gift/design1btn.png") no-repeat;width:951px;height:84px;top:400px;left:25%;}
+.designRow02 .design02Next{background:url("../images/ydc.bak/gift/design2btn.png") no-repeat;width:863px;height:581px;top:50px;left:10%;}
+.designRow03 .design03Next{background:url("../images/ydc.bak/gift/design3btn.png") no-repeat;width:108px;height:37px;top:70%;left:82%;}
+
+.seriesBox .boxIcon{background:url("../images/ydc.bak/series/seriesIcon.png") no-repeat;width:118px;height:124px;}
+
+.teaBox .boxIcon{background:url("../images/ydc.bak/gift/teaIcon.png") no-repeat;width:117px;height:123px;}
+.teaBox .boxIcon.tea2{background:url("../images/ydc.bak/gift/teaIcon2.png") no-repeat;}
+.tea1Btn{background:url("../images/ydc.bak/gift/tea1btn.png") no-repeat;width:79px;height:334px;top:200px;left:10%;}
+.tea2Btn{background:url("../images/ydc.bak/gift/tea2btn.png") no-repeat;width:566px;height:500px;top:auto;right:15%;left:auto;bottom:130px}
+.tea3Btn{background:url("../images/ydc.bak/gift/tea3btn.png") no-repeat;width:85px;height:337px;top:200px;left:10%}
+.tea4Btn{background:url("../images/ydc.bak/gift/tea4btn.png") no-repeat;width:1000px;height:366px;top:auto;left:20%;bottom:130px}
+.tea5Btn{background:url("../images/ydc.bak/gift/tea5btn.png") no-repeat;width:117px;height:336px;top:200px;left:10%;}
+.tea6Btn{background:url("../images/ydc.bak/gift/tea6btn.png") no-repeat;width:786px;height:389px;top:auto;left:35%;bottom:130px}
+
+.sourceBox .boxIcon{background:url("../images/ydc.bak/gift/sourceIcon.png") no-repeat;width:117px;height:124px;}
+.sourceRow01 .next{background:url("../images/ydc.bak/gift/source1btn.png") no-repeat;width:134px;height:254px;top:171px;left:25%;}
+.source02Next{background:url("../images/ydc.bak/gift/source2btn.png") no-repeat;width:1015px;height:164px;top:100px;left:25%;}
+
+/**contact us**/
+#contact_page{}
+.contBox{width:960px;padding:90px 0 30px;position:fixed;top:0;left: 0;z-index: 1}
+.contactTab td{padding-bottom:60px}
+.tdHead div{border-bottom:1px solid #333;text-align: right;line-height:20px;}
+.tdCont{padding-left:15px;line-height:20px;letter-spacing: 1px}
+
+/**响应式
+@media (max-width:849px) {
+	.brandInfo{width: 180px;height:auto}
+}
+@media (min-width:850px) and (max-width:1000px) {
+	.brandInfo{width: 200px;height:auto}
+}
+@media (min-width:1001px) and (max-width:1500px){
+	.brandInfo{width:250px;height:auto}
+}
+@media (min-width:1501px) and (max-width:2000px){
+	.brandInfo{width:284px;height:auto}
+}
+@media (min-width:2001px) and (max-width:2500px){
+	.brandInfo{width:300px;height:auto}
+}
+@media (min-width:2501px){
+	.brandInfo{width:350px;height:auto}
+}**/

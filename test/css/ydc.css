@@ -1,0 +1,71 @@
+@charset "utf-8";
+/**
+  * base.css
+  */
+/*html{height:101%}*/
+body{-webkit-text-size-adjust:none;background:#fff;min-width:1150px;font-family:Arial,Microsoft YaHei;font-size:12px}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
+ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal}
+a{text-decoration:none;outline:none;/*blr:expression(this.onFocus=this.blur());*/color:#403324}
+a:hover{text-decoration:underline}
+.clearer{clear:both;height:1px;overflow:hidden;line-height:0}
+.clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.clearfix{zoom:1;_height:1%}
+.hide{display:none}
+.cgold{color:#A2835C}
+table{border-collapse:collapse}
+
+.fL{float:left}
+.fR{float:right}
+.blockShadow{-moz-box-shadow:0 0 15px #aaa;-webkit-box-shadow:0 0 15px #aaa;o-box-shadow:0 0 15px #aaa;-ms-box-shadow:0 0 15px #aaa;box-shadow:0 0 15px #aaa;*border:1px solid #eee}
+
+/*#Header{height:155px;background:#f8f8f9}*/
+#Header{height: 112px;width:100%;position: fixed;top: 0;left: 0;z-index: 9999;}
+.headBox{background: #f8f8f9;width: 100%;height:100%}
+#Logo{display:block;width:271px;height:51px}
+#Menu{float:left}
+#Menu li{float:left;border-left:1px solid #b8b1a4;padding:49px 0 0;}
+#Menu li.last{border-right:1px solid #b8b1a4}
+#Menu li a{display:block;background: url("../images/ydc/menu.png") no-repeat;width:100px;height:35px;text-indent:-99999px}
+#Menu li a.philosopht{background-position:-95px 0;padding:0 10px 0 0}
+#Menu li a.gift{background-position:-192px 0}
+#Menu li a.contact{background-position:-285px 0}
+#Menu li a.shop{background-position:-373px 0;padding:0 15px 0 0}
+.pageInfo{float:right;width:136px;margin:45px 50px 0 0;_margin:30px 15px 0 0}
+#Menu li.logoBox{border:none;padding:41px 37px 0 55px}
+#Menu li.logoBox a{text-indent:0;width:221px;height:42px;background:none}
+
+#Main{position:relative;overflow:hidden;width:100%}
+#MainCont{position:absolute;top:0;left:0;width:100%;height:auto;z-index: 2;display: none;}
+#MainCont.old{z-index:1}
+#Mask{background:#fff;z-index:3;width:100%;height:100%;position:absolute;display: none;}
+#SlideShow{width:100%}
+#SlideMain{margin:0 auto;position:relative;}
+.slideImg{position:relative;}
+.slideImg li{position:absolute;top:0;left:0;display:block;width:100%;height:auto;}
+.slideImg li a:hover{cursor:default}
+
+.slideBt{width:100px;margin:0 auto;padding-top:15px;position:fixed;bottom:30px;left:30px;z-index:9}
+.slideBt li{float:left;cursor: pointer;background:#999;width:15px;height:15px;overflow:hidden;margin-right:5px;text-indent:-99999px}
+.slideBt li.current{background:#333}
+
+/**Brand**/
+.brandInfo{background:url("../images/ydc/brandInfo01.png") no-repeat;text-indent:-99999px;position:absolute;top:150px;left:200px;z-index:1;width:252px;height:411px}
+
+/**Philosopht**/
+.PhiBox{position:relative;}
+.phiRow{position:absolute;top:0;left:0}
+.phi01,.phi02,.phi03{position:absolute;top:100px;left:80px;z-index:1}
+.phi01,.phi01 a{background:url("../images/ydc/phiInfo01.png") no-repeat;width:345px;height:315px}
+.phi01 a{background-position:0 -315px;display:block;height:50px;width:145px;text-indent:-99999px;position:relative;top:315px}
+
+.phi02{left:auto;right:80px;}
+.phi02,.phi02 a{background:url("../images/ydc/phiInfo02.png") no-repeat;width:375px;height:308px}
+.phi02 a{background-position:right -308px;display:block;height:52px;width:135px;text-indent:-99999px;position:relative;top:308px;left:240px}
+
+.phi03{background:url("../images/ydc/phiInfo03.png") no-repeat;width:238px;height:320px;top:100px;left:150px;text-indent:-99999px}
+.phi03 a{display:block;width:100%;height:100%}
+
+/**contact us**/
+.contBox{width:960px;margin:0 auto;padding:30px 0}

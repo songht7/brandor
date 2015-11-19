@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{-webkit-text-size-adjust:none;background:#fff;color:#000;font-family:'Noto Sans',SimHei, sans-serif;font-size:12px;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
+a{ color:#000;}
+.wrapper{ margin:0 auto; width:800px; border:solid #D4D0C7 1px;}
+.hide{display:none;}
+.clear{clear:both;}
+
+.wrapperlogin{ margin:0 auto; width:720px;}
+.topFrame{ height:92px;}
+.middleFrame{ margin-top:-1px;}
+.leftFrame{ width:175px; height:100%; float:left;}
+.mainFrame{ float:left; width:775px; height:600px; margin-left:10px;}
+.menu_right{font-size: 90px;line-height: 480px;margin: 0 auto;text-align: center;width: 99%;}
+
+/* top */
+.top{ position:relative; height:200px;}
+.logo{ position:absolute; font-size:16px; color:#FFFFFF; margin-left:10px; margin-top:1px;}
+.logo1{ position:absolute;top:35px;left:15px;}
+.topMap{ float:right; height:185px;}
+.topMap p{font-size:12px;text-align:center; cursor:pointer;margin:80px 40px 0 0;}
+.topMap p:hover{color:#790101;}
+/* top end */
+
+/* left */
+.title{ margin:0 0 0 15px;}
+.title a{font-size:12px;text-decoration: none;line-height: 24px;}
+.title a:hover{text-decoration:underline;}
+.title .mainRed{text-decoration:underline;}
+.second{color:#808080;}
+.sub_title{display:none;}
+/* left end */
+
+/* main */
+.content{margin:0 20px 0 0;padding:0 0 45px 0;}
+	/*deteail*/
+#submit{border:0;background:#000;color:#fff;width:95px;height:25px;right:25px;position: absolute;}
+
+.status{ background:#e1e1e1; height:35px;overflow:hidden;padding:0 0 0 6px;}
+.status p{line-height:29px;height:29px;width:75px;margin:6px 0 0 0;float:left;text-align:center;cursor: pointer;}
+.status .active{color:#790101;border-radius:4px 4px 0 0 ;background:#fff;}
+.status p:hover{color:#790101;}
+.r_top{margin:0 0 10px 0 ;}
+
+.leftA{margin:0 0 20px 0;}
+.leftAlist{padding:0 0 10px;}
+.r_detail{background:#f5f5f5;padding:15px;margin: 0 0 20px;}
+.leftAlist img{max-width:250px;}
+.r_detail .r_img{float:left;}
+.r_detail .r_show{float:right;}
+.r_detail .r_row{overflow:hidden;margin:0 0 10px 0;}
+.r_detail .r_row input{float:left;}
+.r_detail .r_row a{float:right;}
+.r_detail .r_title{width:90px;margin:0 10px 0 0;text-align:right;float:left;line-height:22px;}
+.r_detail .r_text{height:24px;width:77px;margin:0 10px 0 0;}
+.leftAlist p{line-height:30px;}
+.leftAlist .text{width:401px;height:29px;}
+.leftAlist textarea{width:772px;height:136px;}
+	/*deteail end*/
+	
+	/*list*/
+.mytable{ width:100%; }
+tr{ height:50px;}
+.th{padding:15px;}
+.td1{padding:0 0 0 15px;border-bottom:1px solid #e1e1e1;}
+.td1 a{line-height:20px;}
+.show_show{background:url(../img/show.jpg) no-repeat;height:20px;width:20px;cursor:pointer;}
+.show_show1{background:url(../img/show.jpg) no-repeat 0px -20px;}
+	/*list end*/
+	/*page*/
+.page{height:20px;padding:30px 0 0 0;}
+.page_left{float:left;}
+#button{border:solid 1px #c2c2c2;background:#ebebeb;color:#790101;font-size:12px;line-height:16px;}
+.page_right{float:right;}
+.page_right a{padding:0 0 0 10px;text-decoration:none;color:#999999;font-size:14px;}
+.page_right .active{text-decoration:underline;}
+	/*page end*/
+	
+/* main end */
+
+/*login*/
+.login{overflow:hidden;margin-top: 100px; background-color:#fff;}
+.logincon{top:50px; overflow: hidden;}
+.logo2{ height:185px; background:url(../img/blslogo.png) no-repeat 35px 55px; width:280px;float:left;}
+.logininput{height:370px;overflow:hidden;width:430px;padding: 75px 0 0 5px;float:left;}
+.logininput .p8{font-size:30px;color:#656565;}
+.logininput .first{margin-top:50px;}
+.loginlist{overflow:hidden;margin-bottom:10px;font-size:11px;width: 340px;}
+.loginlist #text1{ float:left; width:338px; height:32px; background-color:#FFFFFF; border:solid 1px #ccc;}
+.loginlist #select1{float:left;height:18px;width:18px;margin:0;padding:0;}
+.loginlist .selectTest{float:left;height:18px;line-height:22px;}
+.loginlist .forgotPassword{float:right;height:18px;line-height:22px;color:#666;}
+.loginlist #button{ width:95px; height:28px; border:0px; float:right; color:#fff;background:#000;}
+.login .p9{font-size:10px;margin: 0 0 16px 20px;color:#666;}
+
+
+.num_bar{text-align:right;}
+
+/*need*/
+.mainGray{color:#808080;}
+.mainRed{color:#000;}

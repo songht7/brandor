@@ -1,0 +1,153 @@
+<?php include_once 'header.xxx';?>
+	
+<?php include_once 'menu.xxx';?>
+<?php if($cat_id==1||$cat_id==11){?>
+<div id="Main">
+	<?php if(!empty($prev)){?>
+    <a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$prev['goods_id']);?>" class="proBtn prevPro">上一个</a>
+	<?php }?>
+	<?php if(!empty($next)){?>
+    <a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$next['goods_id']);?>" class="proBtn nextPro">下一个</a>
+	<?php }?>
+    <a href="javascript:void(0)" class="goTop">BACK</a>
+
+    <div class="proInfos">
+        <img src=".<?php echo $bg['original_src'];?>" alt="" width="978" height="463" />
+    </div>
+	<div class="contBox details">
+        <table class="detailTab detailTab_case" width="100%">
+            <tr>
+                <th width="186" class="td_a"><span class="ctg_title_case ctg_title_en"><?php echo $pro['title'][0]?></span></th>
+                <th width="472" class="td_b"><span class="ctg_title_case ctg_title_cn"><?php echo $pro['title'][1]?></span></th>
+                
+                <th width="200" class="td_c"><span class="line_yellow">&nbsp;</span></th>
+            </tr>
+            <!-- 背景 -->
+            <tr>
+                <td class="td_a detail_title">
+                    <div class="case_infos case_background">背景</div>
+                </td>
+                <td class="td_b detail_views">
+                    <div class="cont">
+                        <p><?php echo $pro['detail_arr'][0];?></p>
+                    </div>
+                </td>
+                <!-- 第三列 -->
+                <td rowspan="3" class="td_c detail_other">
+                    <div class="cont">
+                        <table width="100%">
+                            <tr>
+                                <td width="30">品类</td>
+                                <td><?php echo $pro['detail_arr'][3];?></td>
+                            </tr>
+                            <tr>
+                                <td>品种</td>
+                                <td><?php echo $pro['detail_arr'][4];?></td>
+                            </tr>
+                            <tr>
+                                <td>产地</td>
+                                <td><?php echo $pro['detail_arr'][5];?></td>
+                            </tr>
+                            <tr>
+                                <td>年份</td>
+                                <td><?php echo $pro['detail_arr'][6];?></td>
+                            </tr>
+                            <tr>
+                                <td>容量</td>
+                                <td>
+                                    <?php echo $pro['detail_arr'][7];?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style">
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt share" target="_blank"></a>
+                    </div>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                </td>
+                <!-- /第三列 -->
+            </tr>
+            <!-- 思考 -->
+            <tr>
+                <td class="td_a detail_title">
+                    <div class="case_infos case_thinking">思考</div>
+                </td>
+                <td class="td_b detail_views">
+                    <div class="cont">
+                        <p><?php echo $pro['detail_arr'][1];?></p>
+                    </div>
+                </td>
+            </tr>
+            <!-- 创作 -->
+            <tr class="tr_last">
+                <td class="td_a detail_title">
+                    <div class="case_infos case_creative">创作</div>
+                </td>
+                <td class="td_b detail_views">
+                    <div class="cont">
+                        <p><?php echo $pro['detail_arr'][2];?></p>
+                    </div>
+                </td>
+            </tr>
+            <!-- / -->
+        </table>
+		<!-- 内容 -->
+        <?php echo $pro['detail_arr'][8];?>
+        <!-- / -->
+	</div>
+</div>
+<?php }else{?>
+<div id="Main">
+	<?php if(!empty($prev)){?>
+    <a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$prev['goods_id']);?>" class="proBtn prevPro">上一个</a>
+	<?php }?>
+	<?php if(!empty($next)){?>
+    <a href="<?php echo $this->url_rewrite('index.php?a=home&m=goods&id='.$next['goods_id']);?>" class="proBtn nextPro">下一个</a>
+	<?php }?>
+    <a href="javascript:void(0)" class="goTop">BACK</a>
+
+    <div class="proInfos">
+        <img src=".<?php echo $bg['original_src'];?>" alt="" width="978" height="463" />
+    </div>
+	<div class="contBox details">
+        <table class="detailTab" width="100%">
+            <tr>
+                <th width="186" class="td_a"><span class="ctg_title ctg_title_<?php echo $sub_type;?> ctg_title_en">&nbsp;</span></th>
+                <th width="472" class="td_b"><span class="ctg_title ctg_title_<?php echo $sub_type;?> ctg_title_cn"><?php echo $title;?></span></th>
+                
+                <th width="200" class="td_c"><span class="line_yellow">&nbsp;</span></th>
+            </tr>
+            <tr>
+                <td class="td_a detail_title">
+                    <div class="cont">
+                        <?php echo $pro['goods_name'];?>
+                    </div>
+                </td>
+                <td class="td_b detail_views">
+                    <div class="cont">
+                        <p><?php echo $pro['detail_arr'][0];?></p>
+                    </div>
+                </td>
+                <!-- 第三列 -->
+                <td class="td_c detail_other">
+                    <div class="cont">
+                        <?php echo $pro['detail_arr'][1];?>
+                    </div>
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style">
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt share" target="_blank"></a>
+                    </div>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                </td>
+            </tr>
+        </table>
+		<!-- 内容 -->
+        <?php echo $pro['detail_arr'][2];?>
+        <!-- / -->
+	</div>
+</div>
+<?php }?>
+<?php include_once 'footer.xxx';?>

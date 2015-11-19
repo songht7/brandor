@@ -1,0 +1,15 @@
+
+</head>
+<body>
+    <div id="Wrapper">
+        <div id="Header" class="clearfix">
+            <a href="./" id="Logo">logo</a>
+            <ul class="menu clearfix">
+                <li class="first"><a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id=1');?>" class="menuLink mLink1 <?php if(($_GET['m']=='category'&&$id=='1')||($_GET['m']=='goods'&&$cat_id=='1')){?>active<?php }?>">品牌案例</a></li>
+                <li><a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id=7');?>" class="menuLink mLink2 <?php if(($_GET['m']=='category'&&$id=='7')||($_GET['m']=='goods'&&$cat_id=='7')){?>active<?php }?>">博朗狮动态</a></li>
+                <li><a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id=6');?>" class="menuLink mLink3 <?php if(($_GET['m']=='category'&&$id=='6')||($_GET['m']=='goods'&&$cat_id=='6')){?>active<?php }?>">博朗狮方法</a></li>
+                <li><a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id=8');?>" class="menuLink mLink4 <?php if(($_GET['m']=='category'&&$id=='8')||($_GET['m']=='goods'&&$cat_id=='8')){?>active<?php }?>">博朗狮能力</a></li>
+                <li><a href="<?php echo $this->url_rewrite('index.php?a=home&m=category&id=5');?>" class="menuLink mLink5 <?php if(($_GET['m']=='category'&&$id=='5')||($_GET['m']=='goods'&&$cat_id=='5')){?>active<?php }?>">何为品牌</a></li>
+                <li class="last"><a href="<?php echo $this->url_rewrite('index.php?a=home&m=contact&id=18');?>" class="menuLink mLink6 <?php if($_GET['m']=='contact'){ ?>active<?php }?>">联系我们</a></li>
+            </ul>
+        </div>

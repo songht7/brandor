@@ -1,0 +1,42 @@
+<?php include_once 'header.xxx';?>
+
+<?php include_once 'menu.xxx';?>
+<div id="Main">
+    <img src=".<?php echo $img[0]['original_src'];?>" width="950" height="463" class="contImg"/>
+    <div class="contBox contactDetail">
+        <table class="detailTab" width="100%">
+            <tr>
+                <!--联系我们 class='ctg_title_contact'-->
+                <th width="186" class="td_a"><span class="ctg_title ctg_title_contact ctg_title_en">&nbsp;</span></th>
+                <th width="472" class="td_b"><span class="ctg_title ctg_title_contact ctg_title_cn">联系我们</span></th>
+                
+                <th width="200" class="td_c"><span class="line_yellow">&nbsp;</span></th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <table class="subTab">
+                    <td width="186" class="td_a detail_title" style="background:#fff">
+                        <div class="cont"></div>
+                    </td>
+                    <td class="td_b detail_views" style="background:#fff">
+                        <div class="cont">
+                            <div class="contactUs">
+                                <?php $contact=explode('":;"',$share['art_detail']);?>
+                                <?php echo $contact[1];?>
+                            </div>
+                        </div>
+                    </td>
+                </table>
+                </td>
+                <td class="td_c detail_other">
+                    <div class="cont"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="contactBox">
+        <img src=".<?php echo $img[1]['original_src'];?>" alt=""/>
+    </div>
+</div>
+
+<?php include_once 'footer.xxx';?>

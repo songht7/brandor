@@ -1,0 +1,16 @@
+
+        <div id="Footer">
+            <div class="footerBox">
+                <!-- 底部内容 -->
+                <a href="http://shop65241389.taobao.com/" target="_blank" class="taobao">taobao</a>
+                
+                <a href="http://www.brandor.net" class="fLink">品牌沟通 / 创意整合</a>
+                <a href="/ydc/index-a-home-m-contact-id-19.htm" class="weixin">weixin</a>
+                <a href="http://weibo.com/u/3801190616" target="_blank" class="weibo">sina weibo</a>
+                <div class="clearn"></div>
+                <!-- /底部内容 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

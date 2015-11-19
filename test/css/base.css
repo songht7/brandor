@@ -1,0 +1,28 @@
+@charset "utf-8";
+/**
+  * base.css
+  */
+body{-webkit-text-size-adjust:none;background:#fff;min-width:960px;font-family:Arial,Microsoft YaHei;font-size:12px}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
+ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal}
+a{text-decoration:none;outline:none;/*blr:expression(this.onFocus=this.blur());*/color:#403324}
+a:hover{text-decoration:underline}
+.clear_f{clear:both;height:1px;overflow:hidden;line-height:0}
+.clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.clearfix{zoom:1;_height:1%}
+.hide{display:none}
+.cgold{color:#A2835C}
+table{border-collapse:collapse}
+
+.fL{float:left}
+.fR{float:right}
+.blockShadow{-moz-box-shadow:0 0 15px #aaa;-webkit-box-shadow:0 0 15px #aaa;o-box-shadow:0 0 15px #aaa;-ms-box-shadow:0 0 15px #aaa;box-shadow:0 0 15px #aaa;*border:1px solid #eee}
+.txt1{border:1px solid #eee;padding:2px 5px;width:150px;height:18px;
+	-moz-border-radius:3px;-webkit-border-radius:3px;o-border-radius:3px;-ms-border-radius:3px;border-radius:3px;
+	}
+.txt1.on{border-color:#ccc;-moz-box-shadow:0 0 3px 2px #eee inset;-khtml-box-shadow:0 0 3px 2px #eee inset;-webkit-box-shadow:0 0 3px 2px #eee inset;box-shadow:0 0 3px 2px #eee inset}
+		
+/** Wrapper **/
+#Wrapper{width:940px;padding:20px 10px;margin:0 auto}
+.mLink{display:block;line-height:28px;font-size:24px;color:#bbb;padding:5px 0}

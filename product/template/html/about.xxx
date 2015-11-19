@@ -1,0 +1,35 @@
+
+<?php include_once 'header.xxx';?>
+	
+	
+<?php include_once 'menu.xxx';?>
+		<div id="MainBox" class="clearfix">
+			
+			<div id="ContBlock_a">
+				<div id="top">
+					<img src=".<?php echo $img['original_src'];?>">
+				</div>
+				<div id="middle">
+					<?php $about=explode('":;"',$share['art_detail']);?>
+					<div class="m">
+					<p class="atitle"><?php echo $about[0];?></p>
+					<p class="adetail"><?php echo $about[1];?></p>
+					</div>
+					<div class="m">
+					<p class="atitle"><?php echo $about[2];?></p>
+					<p class="adetail"><?php echo $about[3];?></p>
+					</div>
+					<div class="m">
+					<p class="atitle"><?php echo $about[4];?></p>
+					<p class="adetail"><?php echo $about[5];?></p>
+					</div>
+					<div class="m">
+					<p class="atitle"><?php echo $about[6];?></p>
+					<p class="adetail"><?php echo $about[7];?></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+<?php include_once 'footer.xxx';?>
