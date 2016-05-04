@@ -20,7 +20,7 @@
 		<div class="pageRow">
 			<div class="ctgListBox">
 				<!-- 列表标题 -->
-				<div class="ctgTitle <?php echo $cat['sub_type'];?>"><?php echo $cat['cat_name'];?></div>
+				<div class="ctgTitle ctg_<?php echo $cat['cat_id'];?>"><strong>C&S BRAND</strong></div>
 				<!-- /列表标题 -->
 
 				<div class="ctgList <?php if($_GET['m']=='category'&&$id=='1'){?>caseList<?php }?> clearfix">

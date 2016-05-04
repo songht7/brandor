@@ -16,7 +16,7 @@ $(function(){
             var ctgTitleBlock='<div class="ctgProTitle">'+ctgTitle+"</div>";
         }
         if(obj.find('.linkOver').length==0){
-            var linkOver='<div class="linkOver"><img src="../images/bls/imgs/black.png"/>'+ctgTitleBlock+'</div>';
+            var linkOver='<div class="linkOver"><img src="../images/bls/imgs/bg.png"/>'+ctgTitleBlock+'</div>';
             obj.append(linkOver);
         }
         if(obj.prev().hasClass('ctgLink')){

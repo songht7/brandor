@@ -32,21 +32,27 @@ $(function(){
 	</div>
 </div>
 <div class="title">
-	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=5'" href="javascript:void(0);" >新闻动态</a>
+	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=5'" href="javascript:void(0);" >产品设计</a>
 	<div class="title sub_title">
 		<a class="second" onclick="javascript:parent.mainFrame.location.href='index.php?a=product&m=index&id=5'" href="javascript:void(0);" >- 列表</a>
 	</div>
 </div>
 <div class="title">
-	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=6'" href="javascript:void(0);" >品牌专栏</a>
+	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=6'" href="javascript:void(0);" >空间营造</a>
 	<div class="title sub_title">
 		<a class="second" onclick="javascript:parent.mainFrame.location.href='index.php?a=product&m=index&id=6'" href="javascript:void(0);" >- 列表</a>
 	</div>
 </div>
 <div class="title">
-	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=7'" href="javascript:void(0);" >礼品活动</a>
+	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=7'" href="javascript:void(0);" >生活美学</a>
 	<div class="title sub_title">
 		<a class="second" onclick="javascript:parent.mainFrame.location.href='index.php?a=product&m=index&id=7'" href="javascript:void(0);" >- 列表</a>
+	</div>
+</div>
+<div class="title">
+	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=category&m=show_category_detail&id=2'" href="javascript:void(0);" >新闻动态</a>
+	<div class="title sub_title">
+		<a class="second" onclick="javascript:parent.mainFrame.location.href='index.php?a=product&m=index&id=2'" href="javascript:void(0);" >- 列表</a>
 	</div>
 </div>
 <div class="title">
@@ -55,9 +61,9 @@ $(function(){
 		<a class="second" onclick="javascript:parent.mainFrame.location.href='index.php?a=product&m=index&id=8'" href="javascript:void(0);" >- 列表</a>
 	</div>
 </div>
-<div class="title">
+<!-- <div class="title">
 	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=news&m=show_news_detail&id=18'" href="javascript:void(0);" >联系我们</a>
-</div>
+</div> -->
 <?php if($_SESSION[$this->shop_name]['h_id']==5){?>
 <div class="title">
 	<a class="first" onclick="javascript:parent.mainFrame.location.href='index.php?a=config&m=index'" href="javascript:void(0);" >config</a>

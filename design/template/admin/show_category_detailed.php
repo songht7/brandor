@@ -20,7 +20,41 @@ $(function(){
 			}
 			
 		});
-});
+		$('.show_order').click(function (){
+			$(this).hide().next().show();
+			$(this).next().selectRange('100','100');
+		});
+		$('.show_order_text').blur(function(){
+			var thisdiv=$(this);
+			 var val=$(this).attr('value');
+			// var id=$(this).attr('data-catid');
+			// if(val!=null){
+			// 	$.post("./index.php?a=category&m=edit_category",{id:id,val:val},function(data){
+			// 		if(data.say=='ok'){
+			// 			thisdiv.prev().html(data.val);
+			// 			thisdiv.attr('value',data.val);
+			// 		}
+			// 	},'json');
+			// }
+			thisdiv.prev().html(val);
+			thisdiv.attr('value',val);
+			$(this).hide().prev().show();
+		});
+	});
+	$.fn.selectRange = function(start, end) {
+		return this.each(function() {
+			if (this.setSelectionRange) {
+				this.focus();
+				this.setSelectionRange(start, end);
+			} else if (this.createTextRange) {
+				var range = this.createTextRange();
+				range.collapse(true);
+				range.moveEnd('character', end);
+				range.moveStart('character', start);
+				range.select();
+			}
+		});
+	};
 </script>
 <title>无标题文档</title>
 </head>
@@ -43,6 +77,13 @@ $(function(){
 				<div class="show_show show_show<?php if(isset($v['is_show'])){echo $v['is_show'];}else{echo 1;}?> r_show" >
 					<input type="hidden" name="is_showi[<?php echo $v['img_id'];?>-zh_tw]" value="<?php if(isset($v['is_show'])){echo $v['is_show'];}else{echo 1;}?>">
 				</div>
+
+				<div class="sort" style="float:right;padding:0 20px 0 0;width:200px">
+					<span style="font-size:14px;display:block;padding:0 0 10px">px</span>
+					<div class="show_order" value="<?php echo $v['img_id'];?>"><?php echo $v['order_by'];?></div>
+					<input type="text" name="order_by[<?php echo $v['img_id'];?>-zh_tw]" class="show_order_text hide" value="<?php echo $v['order_by'];?>" />
+				</div>
+
 				<div class="r_row">
 					<INPUT TYPE="file" NAME="file_url[<?php echo $v['img_id'];?>-zh_tw]" id="f1" onclick="document.getElementById('edit_doc_zh_tw<?php echo $v['img_id'];?>').value=1">( 建议尺寸: 950 x 450 )
 					<input type="hidden" name="edit_doc[<?php echo $v['img_id'];?>-zh_tw]" id="edit_doc_zh_tw<?php echo $v['img_id'];?>" value="0">

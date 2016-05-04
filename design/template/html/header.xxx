@@ -1,11 +1,23 @@
+<?php
+	$title = "";
+	if(isset($_GET['id'])){
+		$ID = $_GET["id"];
+		if($ID==1){$title="| 品牌设计";}
+		else if($ID==5){$title="| 产品设计";}
+		else if($ID==6){$title="| 空间营造";}
+		else if($ID==7){$title="| 生活美学";}
+		else if($ID==9){$title="| 新闻资讯";}
+		else if($ID==8){$title="| 关于我们";}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<meta name="keywords" content="博朗狮" />
-	<meta name="description" content="" />
-	<title>博朗狮 | 品牌设计</title>
+	<meta name="keywords" content="博朗狮，品牌设计，品牌构造，产品设计，空间营造，生活美学，C&S BRAND，陈宋品牌顾问" />
+	<meta name="description" content="博朗狮品牌设计" />
+	<title>C&S BRAND 陈宋品牌顾问 <?php echo $title ?></title>
 
     <link rel="stylesheet"  href="../css/bls.css">
 <script type="text/javascript" src="../script/jquery-1.7.1.min.js"></script>

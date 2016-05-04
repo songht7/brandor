@@ -15,7 +15,7 @@ class home extends init
 	function index(){
 			$title="首页";
 			$base=$this->base();
-			$sql="select * from ".$this->table_name("img")." where type_id='9' and type='C' and is_show='1' ";
+			$sql="select * from ".$this->table_name("img")." where type_id='9' and type='C' and is_show='1'";/* order by order_by asc*/
 			$bg=getFetchAll($sql,$this->conn);
 			
 			$sql="select c.*,i.cat_name,img.original_src from ".$this->table_name("category")." as c "
@@ -27,7 +27,7 @@ class home extends init
 			$sql="select g.*,i.goods_name,img.original_src from ".$this->table_name("goods")." as g "
 				." left join ".$this->table_name("goods_i8n")." as i on i.goods_id=g.goods_id "
 				." left join ".$this->table_name("img")." as img on img.type_id=g.goods_id "
-				." where g.cat_id in (1) and g.is_show='1' and img.type='P' and img.point='0' order by order_by desc";/* limit 0,4*/
+				." where g.cat_id in (1,5,6,7,9) and g.is_show='1' and g.is_pick='1' and img.type='P' and img.point='0' order by edit_time desc";/* limit 0,4*/
 			$goods=getFetchAll($sql,$this->conn);
 			
 			$sql="select g.*,i.goods_name,img.original_src from ".$this->table_name("goods")." as g "
@@ -68,7 +68,7 @@ class home extends init
 			
 			$title=$cat['cat_name'];
 			
-			$sql="select * from ".$this->table_name("img")." where type_id='".$id."' and point='1' and type='C' and is_show='1' ";
+			$sql="select * from ".$this->table_name("img")." where type_id='".$id."' and point='1' and type='C' and is_show='1'"; /*order by order_by asc*/
 			$bg=getFetchAll($sql,$this->conn);
 			
 			$sql="select g.*,i.goods_name,img.original_src from ".$this->table_name("goods")." as g "
@@ -105,7 +105,7 @@ class home extends init
 			$sub_type=$cat['sub_type'];
 			$title=$cat['cat_name'];
 			
-			$sql="select * from ".$this->table_name("img")." where type_id='".$id."' and point='1' and type='P'";
+			$sql="select * from ".$this->table_name("img")." where type_id='".$id."' and point='1' and type='P'";/* order by order_by asc*/
 			$bg=getFetchRow($sql,$this->conn);
 			
 			$sql="SELECT g.goods_id FROM ".$this->table_name('goods')." as g "

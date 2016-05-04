@@ -21,7 +21,7 @@ class category extends init
 				$sql="select * from ".$this->table_name('category')." where cat_id='{$id}'";
 				$product=getFetchAll($sql,$this->conn);
 				
-				$sql="select * from ".$this->table_name('img')." where type_id='{$id}' and type='C' order by i8n asc";
+				$sql="select * from ".$this->table_name('img')." where type_id='{$id}' and type='C' order by i8n asc";/*, order_by asc*/
 				$img=getFetchAll($sql,$this->conn);
 				if(!empty($img)){
 					foreach($img as $k=>$v){
@@ -66,6 +66,7 @@ class category extends init
 							}else{
 								$img_sql="";
 							}
+							// order_by='".$_POST['order_by'][$k]."',
 							$sql="update ".$this->table_name('img')." set original_link='".$_POST['original_link'][$k]."',is_show='".$_POST['is_showi'][$k]."',edit_by='".$_SESSION[$this->shop_name]['h_id']."' ".$img_sql." where img_id='".$_POST['img_id'][$k]."' ";
 						}else{
 							if($v==1){

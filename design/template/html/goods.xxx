@@ -114,8 +114,8 @@
 	<div class="contBox details">
         <table class="detailTab" width="100%">
             <tr>
-                <th width="186" class="td_a"><span class="ctg_title ctg_title_<?php echo $sub_type;?> ctg_title_en">&nbsp;</span></th>
-                <th width="472" class="td_b"><span class="ctg_title ctg_title_<?php echo $sub_type;?> ctg_title_cn"><?php echo $title;?></span></th>
+                <th width="186" class="td_a"><span class="ctg_title ctg_title_<?php echo $cat_id;?> ctg_title_en">&nbsp;</span></th>
+                <th width="472" class="td_b"><span class="ctg_title ctg_title_<?php echo $cat_id;?> ctg_title_cn"><?php echo $title;?></span></th>
                 
                 <th width="200" class="td_c"><span class="line_yellow">&nbsp;</span></th>
             </tr>

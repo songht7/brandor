@@ -2,11 +2,8 @@
         <div id="Footer">
             <div class="footerBox">
                 <!-- 底部内容 -->
-                <div id="Copyright">博朗狮品牌设计顾问机构,BRANDOR Design & Consultont Co.,Ltd</div>
-                
-                <a href="http://www.brandor.net" class="fLink">品牌沟通 / 创意整合</a>
-                <a href="/design/index-a-home-m-contact-id-18.htm" class="weixin">weixin</a>
-                <a href="http://weibo.com/brandorchina" target="_blank" class="weibo">sina weibo</a>
+                <div id="Copyright" class="ftBlock">©2015 C&S BRAND COMMUNICATION</div>
+                <div id="Filing" class="ftBlock">粤ICP备 10042051号</div>
                 <div class="clearn"></div>
                 <!-- /底部内容 -->
             </div>

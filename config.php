@@ -6,12 +6,12 @@
 
 	
 
-	// $con=mysql_connect('bdm-004.hichina.com','bdm0040224','brandor0975');
+	$con=mysql_connect('bdm-004.hichina.com','bdm0040224','brandor0975');
 
-	// mysql_select_db('bdm0040224_db');
-	$con=mysql_connect('127.0.0.1','','');
+	mysql_select_db('bdm0040224_db');
+	// $con=mysql_connect('127.0.0.1','root','');
 
-	mysql_select_db('ydc_company');
+	// mysql_select_db('ydc_company');
 
 	mysql_query('set names utf8',$con);
 

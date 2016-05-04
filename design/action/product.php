@@ -41,21 +41,23 @@ class product extends init
 			$this->isset_cookie();
 			if(!empty($_POST)){
 				$id=$_POST['id'];
+				$type=$_POST['type'];
 				$data['id']=$id;
-				$sql="select is_show from ".$this->table_name('goods')." where goods_id='{$id}'";
-				//pr($sql);
+				if(empty($type)){$type='is_show';}
+				$sql="select ".$type." from ".$this->table_name('goods')." where goods_id='{$id}'";
 				$product=getFetchRow($sql,$this->conn);
-				if($product['is_show']=='1'){
-					$is_show=0;
+				$pro=$product[$type];
+				if($pro=='1'){
+					$val=0;
 				}else{
-					$is_show=1;
+					$val=1;
 				}
-				$sql="update ".$this->table_name('goods')." set is_show='".$is_show."' where goods_id='{$id}'";
+				$sql="update ".$this->table_name('goods')." set ".$type."='".$val."' where goods_id='{$id}'";
 				$a=mysql_query($sql,$this->conn);
 				
 				if($a){
 					$data['say']="ok";
-					$data['is_show']=$is_show;
+					$data['val']=$val;
 				}else{
 					$data['say']="error";
 				}
@@ -143,7 +145,7 @@ class product extends init
 			if($_GET['id']!=''&&$_POST['act']=='edit'){
 				$id=$_GET['id'];
 				
-				$sql="update ".$this->table_name('goods')." set is_show='".$_POST['is_show']."',edit_by='".$_SESSION[$this->shop_name]['h_id']."' where goods_id='{$id}'";
+				$sql="update ".$this->table_name('goods')." set is_show='".$_POST['is_show']."',is_pick='".$_POST['is_pick']."',edit_by='".$_SESSION[$this->shop_name]['h_id']."' where goods_id='{$id}'";
 				$a=mysql_query($sql,$this->conn);
 				
 				if(!empty($_POST['edit_doc'])){
@@ -186,7 +188,7 @@ class product extends init
 				}
 			}else if($_POST['act']=='add'){
 				
-				$sql="insert into ".$this->table_name('goods')."(cat_id,is_show,order_by,add_by,add_time,edit_by) values ('".$c_id."','".$_POST['is_show']."','50','".$_SESSION[$this->shop_name]['h_id']."','".$d."','".$_SESSION[$this->shop_name]['h_id']."') ";
+				$sql="insert into ".$this->table_name('goods')."(cat_id,is_show,is_pick,order_by,add_by,add_time,edit_by) values ('".$c_id."','".$_POST['is_show']."','".$_POST['is_pick']."','50','".$_SESSION[$this->shop_name]['h_id']."','".$d."','".$_SESSION[$this->shop_name]['h_id']."') ";
 				$a=mysql_query($sql,$this->conn);
 				$id=mysql_insert_id();
 				

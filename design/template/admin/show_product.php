@@ -9,11 +9,13 @@
 	$(function(){
 		$('.show_show').click(function (){
 			var thisdiv=$(this);
-			$.post("./index.php?a=product&m=change_show",{id:$(this).attr('value')},function(data){
+			var type=$(this).attr("type");
+			if(type==undefined||type==null){type="is_show";}
+			$.post("./index.php?a=product&m=change_show",{id:$(this).attr('value'),type:type},function(data){
 				if(data.say=='ok'){
-				//	alert(data.is_show);
+				//	alert(data.val);
 					thisdiv.attr('class','show_show');
-					thisdiv.addClass('show_show'+data.is_show);
+					thisdiv.addClass('show_show'+data.val);
 				
 				}
 			},'json');
@@ -55,12 +57,14 @@
 </head>
 <body>
 <div class="content">
-
 	<table class="mytable" cellspacing="0" >
     	<tr bgcolor="#e1e1e1" >
         	<td class="th" width="60%">标题</td>
         	<td class="th" width="10%">排序</td>
         	<td class="th" width="10%">显示</td>
+        	<?php if($id!="9"){?>
+        	<td class="th" width="10%">抽取</td>
+        	<?php } ?>
             <td class="th" width="10%">操作</td>
         </tr>
         <?php
@@ -72,6 +76,9 @@
       			<td class="td1"><?php echo $product['goods_name'];?></td>
       			<td class="td1"><div class="show_order" value="<?php echo $product['goods_id'];?>"><?php echo $product['order_by'];?></div><input type="text" class="show_order_text hide" value="<?php echo $product['order_by'];?>" /></td>
 	            <td class="td1"><div class="show_show show_show<?php echo $product['is_show'];?>" value="<?php echo $product['goods_id'];?>"></div></td>
+        	<?php if($id!="9"){?>
+	            <td class="td1"><div class="show_show show_show<?php echo $product['is_pick'];?>" value="<?php echo $product['goods_id'];?>" type="is_pick"></div></td>
+        	<?php } ?>
 	            <td class="td1">
 	            	<a href="index.php?a=product&m=show_product_detail&id=<?php echo $product['goods_id'];?>&c_id=<?php echo $id;?>">编辑</a><br />
 	            	<a href="index.php?a=product&m=del_product&id=<?php echo $product['goods_id'];?>" onclick="return confirm('确定将此产品删除?')">删除</a>

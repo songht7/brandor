@@ -23,9 +23,10 @@ $(function(){
 			var val2=1;
 			if(val==1){val2=0;}
 			if($(this).attr('value')=='you_show'){
-				$('.you_show').parent().removeClass('show_show'+val);
-				$('.you_show').parent().addClass('show_show'+val2);
-				$('.you_show').attr('value',val2);
+				var that=$(this).find(".you_show");
+				that.parent().removeClass('show_show'+val);
+				that.parent().addClass('show_show'+val2);
+				that.attr('value',val2);
 			}else{
 				$(this).removeClass('show_show'+val);
 				$(this).addClass('show_show'+val2);
@@ -52,7 +53,7 @@ $(function(){
     	<div class="leftA">
     		<input name="iid[zh_tw]" type="hidden" value="<?php if(!empty($pro['zh_tw']['goods_i8n_id'])){echo $pro['zh_tw']['goods_i8n_id'];}?>" />
 			<div class="leftAlist" >
-				<span>标题</span>
+				<span>标题123</span>
             </div>
             <div class="leftAlist">
             	<input name="title[zh_tw][]" type="text" class="text" value="<?php if(!empty($pro['zh_tw']['title'][0])){echo $pro['zh_tw']['title'][0];}?>" />
@@ -187,6 +188,10 @@ $(function(){
         <div class="leftA">
         	<div style="line-height:18px;position: absolute;" >显示</div>
         	<div style="left: 29px;position: absolute;" class="show_show show_show<?php if(!empty($product[0]['is_show'])){echo $product[0]['is_show'];}else{echo 0;}?>" value="you_show" ><input class="you_show" type="hidden" name="is_show" value="<?php if(!empty($product[0]['is_show'])){echo $product[0]['is_show'];}else{echo 0;}?>"></div>
+        	<?php if($c_id!="9"){?>
+        	<div style="line-height:18px;position: absolute;left:100px" >抽取</div>
+        	<div style="left: 129px;position: absolute;" class="show_show show_show<?php if(!empty($product[0]['is_pick'])){echo $product[0]['is_pick'];}else{echo 0;}?>" value="you_show" ><input class="you_show" type="hidden" name="is_pick" value="<?php if(!empty($product[0]['is_pick'])){echo $product[0]['is_pick'];}else{echo 0;}?>"></div>
+        	<?php } ?>
             <input name="" type="submit" id="submit" value="DONE 完成" />
         </div>
         
